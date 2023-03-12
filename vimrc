@@ -68,6 +68,10 @@ nnoremap tl <C-w><C-l>
 nnoremap tk <C-w><C-k>
 nnoremap tj <C-w><C-j>
 nnoremap th <C-w><C-h>
+nnoremap tL <C-w>L
+nnoremap tK <C-w>K
+nnoremap tJ <C-w>J
+nnoremap tH <C-w>H
 nnoremap t+s <C-w>>
 nnoremap t-s <C-w><
 nnoremap t+i <C-w>+
