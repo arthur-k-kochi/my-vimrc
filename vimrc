@@ -85,7 +85,7 @@ if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
     if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
         echo "installing NeoBundle..."
-        :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+        :call system("git clone git@github.com:Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
     endif
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -118,7 +118,7 @@ filetype plugin indent on
 NeoBundleCheck
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-    silent execute '!curl -fLo '.data_dir.'/utoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
