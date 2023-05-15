@@ -64,6 +64,7 @@ map <silent> tp :tabprevious<CR>
 map <silent> tt :NERDTreeToggle<CR>
 map ti <C-w>s
 map ts <C-w>v
+nnoremap vi <C-w>
 nnoremap tl <C-w><C-l>
 nnoremap tk <C-w><C-k>
 nnoremap tj <C-w><C-j>
@@ -102,6 +103,9 @@ if has('lua')
     NeoBundle 'Shougo/neocomplete.vim'
     NeoBundle 'Shougo/neosnippet'
     NeoBundle 'Shougo/neosnippet-snippets'
+endif
+if has('python3')
+    NeoBundle 'davidhalter/jedi-vim'
 endif
 if neobundle#is_installed('neocomplete.vim')
     let g:neocomplete#enable_at_startup = 1
